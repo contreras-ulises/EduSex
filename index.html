@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EducSex Villa Victoria | Plataforma de Salud Sexual</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="sticky-top bg-body border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#hero-sec">
+        <img src="assets/mascota-educsex.jpg" alt="Mascota de EducSex" class="mascota-nav">
+        <div>
+          <span class="fw-bold fs-5 brand-title me-1">EducSex</span>
+          <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">CECYTEM</span>
+          <div class="small text-muted fw-semibold" style="font-size: 0.72rem;">Villa Victoria • Salud y Apoyo Juvenil</div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold align-items-lg-center gap-2 pt-3 pt-lg-0">
+          <li class="nav-item"><a class="nav-link px-3 active" href="#hero-sec">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#info-sec">¿Qué es?</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#calculator-sec">Simulador</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#myths-sec">Mitos y Realidades</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#video-sec">Video Educativo</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#centros-sec">Centros y Mapas</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#quiz-sec">Quiz Interactivo</a></li>
+          <li class="nav-item ms-lg-2 text-center py-2 py-lg-0">
+            <button class="btn btn-outline-secondary btn-icon rounded-circle" id="btnThemeToggle" type="button" title="Cambiar Tema Oscuro/Claro">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section py-5 position-relative overflow-hidden" id="hero-sec">
+      <div class="container py-4 text-center">
+        <div class="hero-mascota-wrap mb-3">
+          <img src="assets/mascota-educsex.jpg" alt="Mascota oficial de EducSex" class="mascota-hero">
+        </div>
+        <!-- Badge institucional sin emojis -->
+        <div class="mb-3">
+          <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2 fw-bold d-inline-flex align-items-center gap-2 shadow-sm">
+            <i class="fa-solid fa-award text-success"></i> INICIATIVA COMUNITARIA • PEC 2026
+          </span>
+        </div>
+
+        <h1 class="display-5 display-md-4 fw-extrabold text-body mb-3 hero-title px-2">
+          Tu espacio de orientación <br class="d-none d-md-block">
+          <span class="gradient-text-green">Orientación</span> y
+          <span class="gradient-text-blue">Salud</span>
+          <span class="gradient-text-purple">Sexual</span>
+        </h1>
+
+        <p class="lead text-muted mx-auto mb-4 px-3" style="max-width: 760px; font-size: 1rem;">
+          Desarrollado por alumnos del <strong>CECYTEM Plantel Villa Victoria</strong>. Una plataforma interactiva e innovadora con simuladores, tarjetas de mitos validadas, video oficial, mapas de centros de salud y asistente virtual confidencial.
+        </p>
+
+        <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap mb-5 px-3">
+          <button class="btn btn-success btn-lg rounded-pill px-4 py-3 fw-bold shadow-sm d-flex align-items-center gap-2 w-100 w-sm-auto justify-content-center" id="btnOpenChat" type="button">
+            <i class="fa-solid fa-comment-dots fs-5"></i> Chatear con CecyAyudando
+          </button>
+          <a href="#quiz-sec" class="btn btn-outline-dark btn-lg rounded-pill px-4 py-3 fw-bold d-flex align-items-center gap-2 w-100 w-sm-auto justify-content-center">
+            <i class="fa-solid fa-vial-circle-check text-purple fs-5"></i> Realizar Quiz
+          </a>
+        </div>
+
+        <!-- Metric Counter Badges -->
+        <div class="row g-3 justify-content-center mt-3 px-3" style="max-width: 800px; margin: 0 auto;">
+          <div class="col-4">
+            <div class="p-3 bg-body-tertiary rounded-4 border h-100">
+              <h3 class="fw-bold mb-0 text-success fs-4 fs-md-3">100%</h3>
+              <small class="text-muted fw-semibold" style="font-size: 0.75rem;">Anónimo</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 bg-body-tertiary rounded-4 border h-100">
+              <h3 class="fw-bold mb-0 text-primary fs-4 fs-md-3">Validado</h3>
+              <small class="text-muted fw-semibold" style="font-size: 0.75rem;">Científico</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="p-3 bg-body-tertiary rounded-4 border h-100">
+              <h3 class="fw-bold mb-0 text-purple fs-4 fs-md-3">Local</h3>
+              <small class="text-muted fw-semibold" style="font-size: 0.75rem;">Villa Victoria</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPLICACIÓN E IMPORTANCIA -->
+    <section class="py-5 bg-body-tertiary border-top border-bottom" id="info-sec">
+      <div class="container px-4">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 card-hover">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-circle bg-purple-subtle text-purple flex-shrink-0">
+                  <i class="fa-solid fa-compass fs-4"></i>
+                </div>
+                <h3 class="fw-bold mb-0 h5 h4-md">¿Para qué es esta plataforma?</h3>
+              </div>
+              <p class="text-muted mb-0 small">
+                <strong>EducSex Villa Victoria</strong> es una herramienta digital abierta a todo público. Su objetivo es proporcionar un espacio seguro, accesible y un espacio de orientación accesible donde cualquier persona pueda informarse sobre salud sexual y reproductiva sin tabúes.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 card-hover">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-circle bg-success-subtle text-success flex-shrink-0">
+                  <i class="fa-solid fa-heart-shield fs-4"></i>
+                </div>
+                <h3 class="fw-bold mb-0 h5 h4-md">¿Qué es y por qué conocerlo?</h3>
+              </div>
+              <p class="text-muted mb-0 small">
+                El <strong>embarazo adolescente</strong> ocurre durante la etapa juvenil. Es fundamental que jóvenes y usuarios en general conozcan del tema para tomar decisiones libres, responsables e informadas sobre su cuerpo y prevenir riesgos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOR INTERACTIVO -->
+    <section class="py-5" id="calculator-sec">
+      <div class="container px-4">
+        <div class="text-center mb-5">
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 fw-bold mb-2">
+            <i class="fa-solid fa-sliders me-1"></i> SIMULADOR DE EFECTIVIDAD
+          </span>
+          <h2 class="fw-extrabold h3 h2-md">Calculadora de Métodos Anticonceptivos</h2>
+          <p class="text-muted small">Compara la tasa de eficacia y protección doble contra infecciones</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+              <div class="card-body p-4 p-md-5">
+                <div class="row g-4 align-items-center">
+                  <div class="col-md-5">
+                    <label for="methodSelect" class="form-label fw-bold small">Selecciona un Método:</label>
+                    <select class="form-select form-select-lg rounded-3 mb-3 border-2 fs-6" id="methodSelect">
+                      <option value="condon">Condón Masculino / Femenino</option>
+                      <option value="implante">Implante Subdérmico</option>
+                      <option value="pildora">Pastillas Anticonceptivas</option>
+                      <option value="ritmo">Método del Ritmo (Inseguro)</option>
+                    </select>
+
+                    <div class="p-3 bg-body-tertiary rounded-3 border">
+                      <small class="text-muted d-block fw-semibold mb-1">Protección contra ITS:</small>
+                      <span id="itsBadge" class="badge bg-success fs-6">SÍ PREVIENE ITS</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-7 border-start-md ps-md-4">
+                    <h4 class="fw-bold mb-2 h5" id="methodTitle">Condón Masculino / Femenino</h4>
+                    <p class="text-muted small mb-3" id="methodDesc">
+                      Funda de látex que impide el paso de espermatozoides y microorganismos. Es el único método de barrera con doble protección.
+                    </p>
+
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between fw-bold small mb-1">
+                        <span>Efectividad en uso correcto:</span>
+                        <span id="effectivenessRate" class="text-success">98%</span>
+                      </div>
+                      <div class="progress rounded-pill" style="height: 14px;">
+                        <div id="effectivenessBar" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 98%;"></div>
+                      </div>
+                    </div>
+
+                    <div class="alert alert-info border-0 rounded-3 small mb-0 d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-circle-info fs-5 flex-shrink-0"></i>
+                      <span id="methodTip">Se debe colocar antes de cualquier contacto genital y revisar fecha de caducidad.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUTA INTERACTIVA: ORIENTACIÓN INICIAL -->
+    <section class="py-5 bg-body-tertiary border-top border-bottom" id="ruta-metodo-sec">
+      <div class="container px-4" style="max-width: 980px;">
+        <div class="text-center mb-4">
+          <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2 fw-bold mb-2"><i class="fa-solid fa-route me-1"></i> RUTA EDUCATIVA PERSONALIZADA</span>
+          <h2 class="fw-extrabold h3 h2-md">Encuentra por dónde empezar</h2>
+          <p class="text-muted small">Responde tres preguntas generales y recibe una orientación inicial. No reemplaza una consulta médica.</p>
+        </div>
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-4 p-md-5">
+            <div class="row g-4">
+              <div class="col-md-4"><label for="routePriority" class="form-label fw-bold">¿Qué te importa más?</label><select id="routePriority" class="form-select"><option value="both">Prevenir embarazo y reducir riesgo de ITS</option><option value="pregnancy">Prevenir embarazo con alta eficacia</option><option value="hormonefree">Conocer opciones sin hormonas</option><option value="emergency">Tuviste sexo sin protección o falló el método</option></select></div>
+              <div class="col-md-4"><label for="routeRoutine" class="form-label fw-bold">¿Qué rutina prefieres?</label><select id="routeRoutine" class="form-select"><option value="simple">Algo que pueda usar en cada relación</option><option value="daily">Puedo seguir una rutina diaria</option><option value="long">Quiero conocer opciones de larga duración</option><option value="unsure">Todavía no lo sé</option></select></div>
+              <div class="col-md-4"><label for="routeSupport" class="form-label fw-bold">¿Qué necesitas ahora?</label><select id="routeSupport" class="form-select"><option value="learn">Aprender y comparar</option><option value="provider">Preparar preguntas para personal de salud</option><option value="urgent">Orientación porque ocurrió recientemente</option></select></div>
+            </div>
+            <div class="d-flex flex-wrap gap-2 mt-4"><button class="btn btn-success rounded-pill px-4" id="btnRouteAdvice" type="button"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Crear mi ruta</button><button class="btn btn-outline-secondary rounded-pill px-4" id="btnRouteChat" type="button"><i class="fa-solid fa-comments me-2"></i>Preguntar a CecyAyudando</button></div>
+            <div id="routeResult" class="route-result mt-4 p-4 rounded-4 d-none" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MITOS Y REALIDADES -->
+    <section class="py-5 bg-body-tertiary border-top border-bottom" id="myths-sec">
+      <div class="container px-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-extrabold h3 h2-md">Mitos y Realidades</h2>
+          <p class="text-muted small">Haz clic en cualquier tarjeta para descubrir la verdad científica</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="myth-card card h-100 border-0 shadow-sm rounded-4 p-4 cursor-pointer">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">MITO #1</span>
+                <small class="text-muted fw-bold" style="font-size: 0.75rem;"><i class="fa-solid fa-rotate me-1"></i> Clic para ver</small>
+              </div>
+              <h5 class="fw-bold mb-3 fs-6 myth-question">"Es imposible quedar embarazada en la primera relación sexual."</h5>
+              <div class="myth-answer p-3 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle mt-auto d-none small">
+                <strong class="d-block mb-1"><i class="fa-solid fa-check-circle me-1"></i> REALIDAD CIENTÍFICA:</strong>
+                FALSO. Existe riesgo de embarazo en cualquier relación sexual con penetración sin protección, sin importar si es la primera vez.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="myth-card card h-100 border-0 shadow-sm rounded-4 p-4 cursor-pointer">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">MITO #2</span>
+                <small class="text-muted fw-bold" style="font-size: 0.75rem;"><i class="fa-solid fa-rotate me-1"></i> Clic para ver</small>
+              </div>
+              <h5 class="fw-bold mb-3 fs-6 myth-question">"Usar dos condones al mismo tiempo ofrece el doble de protección."</h5>
+              <div class="myth-answer p-3 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle mt-auto d-none small">
+                <strong class="d-block mb-1"><i class="fa-solid fa-check-circle me-1"></i> REALIDAD CIENTÍFICA:</strong>
+                FALSO. La fricción entre ambos condones provoca que se rompan. Siempre debe usarse únicamente un condón de forma adecuada.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="myth-card card h-100 border-0 shadow-sm rounded-4 p-4 cursor-pointer">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">MITO #3</span>
+                <small class="text-muted fw-bold" style="font-size: 0.75rem;"><i class="fa-solid fa-rotate me-1"></i> Clic para ver</small>
+              </div>
+              <h5 class="fw-bold mb-3 fs-6 myth-question">"Saltar o lavarse después de tener relaciones evita el embarazo."</h5>
+              <div class="myth-answer p-3 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle mt-auto d-none small">
+                <strong class="d-block mb-1"><i class="fa-solid fa-check-circle me-1"></i> REALIDAD CIENTÍFICA:</strong>
+                FALSO. Los espermatozoides se desplazan rápidamente hacia el útero segundos después de la eyaculación. Ningún lavado o movimiento externo detiene el embarazo.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="myth-card card h-100 border-0 shadow-sm rounded-4 p-4 cursor-pointer">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">MITO #4</span>
+                <small class="text-muted fw-bold" style="font-size: 0.75rem;"><i class="fa-solid fa-rotate me-1"></i> Clic para ver</small>
+              </div>
+              <h5 class="fw-bold mb-3 fs-6 myth-question">"El método del ritmo o calendario es 100% seguro si eres ordenada."</h5>
+              <div class="myth-answer p-3 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle mt-auto d-none small">
+                <strong class="d-block mb-1"><i class="fa-solid fa-check-circle me-1"></i> REALIDAD CIENTÍFICA:</strong>
+                FALSO. En la etapa juvenil el ciclo menstrual suele ser irregular por factores hormonales, haciendo que este método tenga un alto margen de fallo.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="myth-card card h-100 border-0 shadow-sm rounded-4 p-4 cursor-pointer">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">MITO #5</span>
+                <small class="text-muted fw-bold" style="font-size: 0.75rem;"><i class="fa-solid fa-rotate me-1"></i> Clic para ver</small>
+              </div>
+              <h5 class="fw-bold mb-3 fs-6 myth-question">"Las pastillas anticonceptivas de emergencia se pueden usar como método regular."</h5>
+              <div class="myth-answer p-3 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle mt-auto d-none small">
+                <strong class="d-block mb-1"><i class="fa-solid fa-check-circle me-1"></i> REALIDAD CIENTÍFICA:</strong>
+                FALSO. Es una dosis hormonal muy alta diseñada únicamente para emergencias. Su uso frecuente altera severamente el ciclo y pierde eficacia.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="myth-card card h-100 border-0 shadow-sm rounded-4 p-4 cursor-pointer">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">MITO #6</span>
+                <small class="text-muted fw-bold" style="font-size: 0.75rem;"><i class="fa-solid fa-rotate me-1"></i> Clic para ver</small>
+              </div>
+              <h5 class="fw-bold mb-3 fs-6 myth-question">"Una persona con ITS siempre presenta síntomas visibles."</h5>
+              <div class="myth-answer p-3 rounded-3 bg-success-subtle text-success-emphasis border border-success-subtle mt-auto d-none small">
+                <strong class="d-block mb-1"><i class="fa-solid fa-check-circle me-1"></i> REALIDAD CIENTÍFICA:</strong>
+                FALSO. Muchas infecciones de transmisión sexual (como el VPH o la Clamidia) pueden ser totalmente asintomáticas durante mucho tiempo.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO EDUCATIVO: REPRODUCCIÓN DENTRO DE EDUSEX -->
+    <section class="py-5 video-section" id="video-sec">
+      <div class="container px-3 px-md-4">
+        <div class="text-center mb-4">
+          <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2 fw-bold mb-2">
+            <i class="fa-solid fa-circle-play me-1"></i> APRENDE A TU RITMO
+          </span>
+          <h2 class="fw-extrabold h3 h2-md">Embarazo en la adolescencia</h2>
+          <p class="text-muted mx-auto" style="max-width:680px">Reproduce el recurso educativo aquí mismo, sin salir de EducSex.</p>
+        </div>
+        <div class="video-player-card mx-auto">
+          <div class="video-player-topline"><span><i class="fa-solid fa-play me-2"></i>Video educativo</span><span class="video-live-dot"></span></div>
+          <div class="video-frame-wrap">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/QD0ZtceQw8A?rel=0&modestbranding=1"
+              title="Video educativo: embarazo en la adolescencia"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-player-caption">
+            <div class="video-caption-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div><strong>Infórmate, decide y cuídate.</strong><p class="mb-0 text-muted small">Si el reproductor no permite mostrar este video, puede deberse a restricciones del canal. El resto de la plataforma seguirá funcionando.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUÍA CORTA PRE-QUIZ (INFORMACIÓN CLAVE) -->
+    <section class="py-5 bg-body-tertiary border-top border-bottom" id="prequiz-sec">
+      <div class="container px-4" style="max-width: 900px;">
+        <div class="text-center mb-4">
+          <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2 fw-bold mb-2">
+            <i class="fa-solid fa-book-open me-1"></i> REPASO RÁPIDO
+          </span>
+          <h2 class="fw-extrabold h3 h2-md">Información Clave para Resolver el Quiz</h2>
+          <p class="text-muted small">Lee estos 4 puntos fundamentales y obtén la puntuación máxima</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="p-3 bg-body rounded-4 border h-100">
+              <h5 class="fw-bold text-success fs-6"><i class="fa-solid fa-shield-halved me-2"></i> 1. Doble Protección</h5>
+              <p class="text-muted small mb-0">El condón (masculino o femenino) es el <strong>único método</strong> que previene embarazos y protege contra Infecciones de Transmisión Sexual (ITS) al mismo tiempo.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="p-3 bg-body rounded-4 border h-100">
+              <h5 class="fw-bold text-primary fs-6"><i class="fa-solid fa-capsules me-2"></i> 2. Anticonceptivos de Emergencia</h5>
+              <p class="text-muted small mb-0">La pastilla del día después debe tomarse lo antes posible (máximo 72 hrs) tras una relación sin protección, pero no reemplaza a un método anticonceptivo habitual.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="col-12 p-3 bg-body rounded-4 border h-100">
+              <h5 class="fw-bold text-purple fs-6"><i class="fa-solid fa-syringe me-2"></i> 3. Métodos Hormonales de Larga Duración</h5>
+              <p class="text-muted small mb-0">El implante subdérmico y el DIU hormonal tienen más del 99% de efectividad contra embarazos, pero <strong>no</strong> protegen contra infecciones (ITS).</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="col-12 p-3 bg-body rounded-4 border h-100">
+              <h5 class="fw-bold text-warning fs-6"><i class="fa-solid fa-ban me-2"></i> 4. Métodos Inseguros</h5>
+              <p class="text-muted small mb-0">El método de "interrumpir la relación" o el "calendario/ritmo" no son confiables, especialmente en la adolescencia debido a la irregularidad hormonal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTROS DE SALUD CON MAPAS DE GOOGLE INTEGRADOS -->
+    <section class="py-5" id="centros-sec">
+      <div class="container px-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-extrabold h3 h2-md">Centros de Salud y Mapas en Villa Victoria</h2>
+          <p class="text-muted small">Ubica las instalaciones médicas y el DIF municipal directamente en el mapa interactivo</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Centro 1 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 p-3 h-100 card-hover">
+              <div class="ratio ratio-16x9 mb-3 rounded-3 overflow-hidden border">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5!2d-100.03!3d19.51!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzM2LjAiTiAxMDAwMSc0OC4wIlc!5e0!3m2!1ses!2smx!4v1650000000000!5m2!1ses!2smx" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <h4 class="fw-bold h5 mb-2">CEAPS Villa Victoria</h4>
+              <p class="text-muted small mb-3">Atención médica, planificación familiar y orientación amigable en salud reproductiva.</p>
+              <span class="badge bg-success-subtle text-success border border-success-subtle align-self-start px-3 py-2">Villa Victoria Centro</span>
+            </div>
+          </div>
+
+          <!-- Centro 2 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 p-3 h-100 card-hover">
+              <div class="ratio ratio-16x9 mb-3 rounded-3 overflow-hidden border">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.0!2d-100.1!3d19.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDI3JzAwLjAiTiAxMDAwNnJzMCcwIlc!5e0!3m2!1ses!2smx!4v1650000000000!5m2!1ses!2smx" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <h4 class="fw-bold h5 mb-2">C.S. San Diego / Los Cedros</h4>
+              <p class="text-muted small mb-3">Módulo de orientación preventiva y distribución de métodos de barrera.</p>
+              <span class="badge bg-primary-subtle text-primary border border-primary-subtle align-self-start px-3 py-2">Comunidad San Diego</span>
+            </div>
+          </div>
+
+          <!-- Centro 3 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 p-3 h-100 card-hover">
+              <div class="ratio ratio-16x9 mb-3 rounded-3 overflow-hidden border">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.0!2d-100.04!3d19.50!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDMwJzAwLjAiTiAxMDAwMic0OC4wIlc!5e0!3m2!1ses!2smx!4v1650000000000!5m2!1ses!2smx" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              <h4 class="fw-bold h5 mb-2">DIF Municipal de Villa Victoria</h4>
+              <p class="text-muted small mb-3">Talleres comunitarios, apoyo psicológico y conferencias de prevención.</p>
+              <span class="badge bg-purple-subtle text-purple border border-purple-subtle align-self-start px-3 py-2">Cabecera Municipal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ INTERACTIVO COMPLETO (4 PREGUNTAS) -->
+    <section class="py-5 bg-body-tertiary border-top" id="quiz-sec">
+      <div class="container px-4" style="max-width: 800px;">
+        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
+          <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+            <span class="badge bg-purple-subtle text-purple border border-purple-subtle rounded-pill px-3 py-2 fw-bold">
+              <i class="fa-solid fa-clipboard-question me-1"></i> QUIZ DE EVALUACIÓN
+            </span>
+            <span class="badge bg-secondary-subtle text-secondary rounded-pill fs-6" id="scoreBadge">Puntuación: 0 / 4</span>
+          </div>
+
+          <h3 class="fw-bold mb-4 h4">Ponte a Prueba sobre Salud Sexual</h3>
+
+          <!-- PREGUNTA 1 -->
+          <div class="quiz-question-block mb-4 p-3 bg-body rounded-3 border">
+            <h5 class="fw-bold mb-2 fs-6">1. ¿Cuál es el único método anticonceptivo que previene al mismo tiempo Embarazos No Planeados e ITS?</h5>
+            <div class="d-grid gap-2 quiz-options" data-qindex="1">
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> A) Pastillas de emergencia
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="true">
+                <i class="fa-regular fa-circle me-2"></i> B) Condón masculino o femenino
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> C) Implante subdérmico
+              </button>
+            </div>
+            <div class="quiz-feedback mt-2 p-2 rounded-3 d-none small"></div>
+          </div>
+
+          <!-- PREGUNTA 2 -->
+          <div class="quiz-question-block mb-4 p-3 bg-body rounded-3 border">
+            <h5 class="fw-bold mb-2 fs-6">2. ¿Qué ocurre si se utilizan dos condones de látex al mismo tiempo?</h5>
+            <div class="d-grid gap-2 quiz-options" data-qindex="2">
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> A) Ofrecen el doble de efectividad
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="true">
+                <i class="fa-regular fa-circle me-2"></i> B) La fricción provoca que se rompan fácilmente
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> C) Es recomendable solo en la primera relación
+              </button>
+            </div>
+            <div class="quiz-feedback mt-2 p-2 rounded-3 d-none small"></div>
+          </div>
+
+          <!-- PREGUNTA 3 -->
+          <div class="quiz-question-block mb-4 p-3 bg-body rounded-3 border">
+            <h5 class="fw-bold mb-2 fs-6">3. ¿El implante subdérmico protege contra Infecciones de Transmisión Sexual (ITS)?</h5>
+            <div class="d-grid gap-2 quiz-options" data-qindex="3">
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> A) Sí, protege 100% contra todas las ITS
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="true">
+                <i class="fa-regular fa-circle me-2"></i> B) No, solo previene embarazos y debe combinarse con condón
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> C) Protege únicamente en menores de edad
+              </button>
+            </div>
+            <div class="quiz-feedback mt-2 p-2 rounded-3 d-none small"></div>
+          </div>
+
+          <!-- PREGUNTA 4 -->
+          <div class="quiz-question-block mb-3 p-3 bg-body rounded-3 border">
+            <h5 class="fw-bold mb-2 fs-6">4. ¿Cuál es el tiempo máximo recomendado para tomar la pastilla anticonceptiva de emergencia?</h5>
+            <div class="d-grid gap-2 quiz-options" data-qindex="4">
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="true">
+                <i class="fa-regular fa-circle me-2"></i> A) Dentro de las primeras 72 horas (3 días)
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> B) Hasta 1 mes después
+              </button>
+              <button class="btn btn-outline-secondary text-start p-2 rounded-3 quiz-opt small" type="button" data-correct="false">
+                <i class="fa-regular fa-circle me-2"></i> C) Se puede tomar en cualquier momento del año como rutina
+              </button>
+            </div>
+            <div class="quiz-feedback mt-2 p-2 rounded-3 d-none small"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CHAT DRAWER (CECYAYUDANDO) -->
+  <div class="chat-drawer card shadow-lg border-0 rounded-4" id="chatDrawer">
+    <div class="card-header bg-success text-white d-flex align-items-center justify-content-between p-3 rounded-top-4">
+      <div class="d-flex align-items-center gap-2 fw-bold small">
+        <img src="assets/mascota-educsex.jpg" alt="" class="mascota-chat">
+        <span>CecyAyudando <span class="d-block fw-normal opacity-75" style="font-size:.7rem">Orientación cercana y sin juicios</span></span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" id="btnCloseChat" aria-label="Cerrar"></button>
+    </div>
+
+    <div class="chat-quick-prompts px-3 pt-3 d-flex flex-wrap gap-2">
+      <button type="button" class="btn btn-sm btn-outline-success rounded-pill chat-prompt">Métodos anticonceptivos</button>
+      <button type="button" class="btn btn-sm btn-outline-success rounded-pill chat-prompt">Consentimiento</button>
+      <button type="button" class="btn btn-sm btn-outline-success rounded-pill chat-prompt">ITS y protección</button>
+      <button type="button" class="btn btn-sm btn-outline-success rounded-pill chat-prompt">Anticoncepción de emergencia</button>
+      <button type="button" class="btn btn-sm btn-outline-success rounded-pill chat-prompt">Efectos secundarios</button>
+      <button type="button" class="btn btn-sm btn-outline-success rounded-pill chat-prompt">¿Cómo elijo un método?</button>
+    </div>
+    <div class="card-body overflow-auto p-3 d-flex flex-column gap-2" id="chatMessages" style="height: 280px;" aria-live="polite">
+      <div class="chat-welcome text-center py-2">
+        <img src="assets/mascota-educsex.jpg" alt="CecyAyudando, mascota de EducSex" class="mascota-welcome mb-2">
+        <div class="chat-msg bot-msg bg-body-tertiary p-3 rounded-3 small text-start">¡Hola! Soy <strong>CecyAyudando</strong>. Puedes preguntarme sobre salud sexual, métodos de protección, consentimiento o cómo buscar atención. Estoy aquí para orientarte sin juzgarte.</div>
+      </div>
+    </div>
+
+    <div class="px-3 pt-2 d-flex justify-content-between align-items-center gap-2">
+      <small class="text-muted"><i class="fa-solid fa-shield-heart me-1"></i>Evita compartir datos personales.</small>
+      <button type="button" class="btn btn-sm btn-link text-muted text-decoration-none" id="btnClearChat">Limpiar chat</button>
+    </div>
+    <div class="card-footer bg-body border-top p-2">
+      <form id="chatForm" class="d-flex gap-2">
+        <input type="text" id="chatInput" class="form-control rounded-pill px-3 small" placeholder="Pregúntame con confianza…" maxlength="1200" autocomplete="off" required>
+        <button type="submit" class="btn btn-success rounded-circle btn-icon flex-shrink-0">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- BOTÓN FLOTANTE FAB -->
+  <button class="btn btn-success btn-lg rounded-circle shadow-lg fab-chat btn-icon" id="btnFabChat" type="button" title="Abrir Chat Anónimo">
+    <i class="fa-solid fa-comments fs-4"></i>
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="py-4 bg-body border-top text-center text-muted small fw-bold px-3">
+    <div class="container">
+      Desarrollado por alumnos de CECYTEM de quinto semestre. Submódulo: Implementa Aplicaciones Web (PEC 2026)
+    </div>
+  </footer>
+
+  <!-- Scripts JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

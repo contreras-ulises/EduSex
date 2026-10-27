@@ -1,0 +1,38 @@
+EDUCSEX + CECYAYUDANDO CON GEMINI
+
+La estructura original se conserva: index.html, styles.css y app.js siguen en la carpeta EducSex.
+Se agregaron assets/mascota-educsex.jpg, server.py, requirements.txt, .env.example y este archivo.
+
+PARA EJECUTAR EL CHATBOT CON GEMINI EN WINDOWS
+1. Instala Python 3.10 o superior.
+2. Abre CMD o PowerShell dentro de la carpeta EducSex.
+3. Ejecuta: py -m venv .venv
+4. Activa el entorno:
+   PowerShell: .\.venv\Scripts\Activate.ps1
+   CMD: .venv\Scripts\activate.bat
+5. Instala dependencias: pip install -r requirements.txt
+6. Copia .env.example como .env.
+7. En .env, reemplaza PEGA_AQUI_TU_CLAVE por tu clave de Google AI Studio.
+   Obtén la clave en https://aistudio.google.com/app/apikey
+   Nunca pongas la clave dentro de app.js ni la compartas públicamente.
+8. Ejecuta: python server.py
+9. Abre http://127.0.0.1:5000 en el navegador.
+
+IMPORTANTE
+- Para que Gemini funcione, necesitas una clave válida, conexión a Internet y acceso al modelo configurado.
+- No abras index.html directamente si quieres usar Gemini: abre la dirección local indicada arriba.
+- Si Gemini no está configurado, el chat usa respuestas educativas básicas de respaldo.
+- El chat envía la pregunta y el contexto reciente al servicio de Gemini cuando está activado. No escribas nombres, dirección, teléfono ni información sensible.
+- La información del chatbot es educativa y no sustituye la valoración de un profesional de salud.
+
+
+NOVEDADES DE ESTA VERSION
+- Se quitó el icono de corazón de la marca y se mantiene la mascota EducSex.
+- El bloque de video ahora abre el recurso en YouTube en otra pestaña para evitar mostrar el error del reproductor incrustado. Si el video original fue retirado, usa la guía y el quiz disponibles en la página.
+- CecyAyudando tiene respuestas locales más concretas para métodos anticonceptivos, anticoncepción de emergencia, efectos secundarios, condón/ITS, embarazo, consentimiento y privacidad.
+- La conexión Gemini incluye instrucciones para responder la pregunta exacta y explicar métodos con más detalle.
+- Se agregó una ruta interactiva para orientar sobre prioridades y hábitos, sin diagnosticar ni prescribir.
+- El botón Limpiar chat borra el historial de la conversación en el navegador.
+
+PRIVACIDAD Y USO RESPONSABLE
+Evita compartir datos personales en el chat. Si Gemini está configurado, el texto de la pregunta y mensajes recientes se envían al servicio de IA para generar la respuesta. La guía interactiva es educativa y no sustituye a personal de salud.
